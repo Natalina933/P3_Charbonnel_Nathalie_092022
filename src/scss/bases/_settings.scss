@@ -1,6 +1,32 @@
+/* Eléments principaux de la page */
 *,::after, ::before{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: roboto, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+* {
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+    header,
+    nav,
+    section,
+    footer {
+    display: block;
+}
+    ul,
+    ol {
+    list-style: none;
+}
+    a {
+    color: inherit;
+    text-decoration: none;
+}
+    body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+    .content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
