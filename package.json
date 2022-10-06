@@ -10,7 +10,7 @@
     "watch": "sass --watch ./src/scss/main.scss ./public/css/style.css"
   },
   "keywords": [],
-  "author": "",
+  "author": "Charbonnel Nathalie",
   "license": "ISC",
-  "description": ""
+  "description": "Projet 3 : dynamisez une page web avec des animations css"
 }

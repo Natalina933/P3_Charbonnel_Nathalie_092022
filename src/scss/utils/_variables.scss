@@ -2,3 +2,23 @@ $primary:#9356DC ;
 $secondary: #FF79DA;
 $tertiary:#99E2D0;
 
+/*style principal*/
+.styleBox {
+    display: flex;
+    align-items: center;
+}
+.titre{
+    font-family: 'shrikhand', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.titre p {
+    margin: 16px 0 16px 17px;
+}
+
+h4,
+p {
+    margin: 9px;
+}
+i{
+    font-weight: 900;
+    height: 50px;
+}

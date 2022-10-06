@@ -1,17 +1,79 @@
-*, ::after, ::before {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: roboto, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "roboto", Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+header,
+nav,
+section,
+footer {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/*style principal*/
+.styleBox {
+  display: flex;
+  align-items: center;
+}
+
+.titre {
+  font-family: "shrikhand", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.titre p {
+  margin: 16px 0 16px 17px;
+}
+
+h4,
+p {
+  margin: 9px;
+}
+
+i {
+  font-weight: 900;
+  height: 50px;
 }
 
 header {
-  height: 90px;
-  width: 100%;
-  border-bottom: 1px solid black;
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
-header h1 {
-  color: #9356DC;
+header img {
+  width: 140px;
+  object-fit: cover;
+  border: 2px solid blue;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
+.contentLogo {
+  height: 125px;
 }
 
 /*# sourceMappingURL=style.css.map */

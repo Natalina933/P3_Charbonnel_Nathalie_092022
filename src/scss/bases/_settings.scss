@@ -1,6 +1,27 @@
-*,::after, ::before{
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: roboto, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "roboto", Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header,
+nav,
+section,
+footer {
+    display: block;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.content {
+    max-width: 1440px;
+    margin: 0 auto;
 }
