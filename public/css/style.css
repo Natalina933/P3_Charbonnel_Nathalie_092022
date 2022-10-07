@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "roboto", Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 header,
@@ -14,27 +13,85 @@ footer {
   display: block;
 }
 
-ul,
-ol {
-  list-style: none;
-}
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
+body {
+  font-family: "roboto", Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
 .content {
-  max-width: 1440px;
   margin: 0 auto;
 }
 
-/*style principal*/
-.styleBox {
+.mapContent {
   display: flex;
-  align-items: center;
+  height: 50px;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  justify-content: center;
+  background-color: #f4f2f2;
+  font-weight: 400;
+  font-size: small;
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.4);
+}
+.mapContent h3 {
+  padding-left: 10px;
 }
 
+.exploreContent {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background: #fafafa;
+  padding: 25px 25px 52px 25px;
+}
+.exploreContent .explore {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+button {
+  font-size: 16px;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  width: 220px;
+  height: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.functioningContent {
+  display: flex;
+  flex-direction: column;
+  border: maroon 2px solid;
+  background: #fafafa;
+  padding: 25px 25px 52px 25px;
+}
+
+.selection li {
+  height: 50px;
+  gap: 15px;
+  align-items: center;
+  border: #c9c9c9 2px solid;
+  border-radius: 50px;
+}
+.selection i {
+  color: grey;
+}
+
+.selection {
+  border: #ff79da 2px solid;
+  gap: 15px;
+}
+
+/*style principal*/
 .titre {
   font-family: "shrikhand", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -48,32 +105,26 @@ p {
   margin: 9px;
 }
 
-i {
-  font-weight: 900;
-  height: 50px;
-}
-
 header {
   position: relative;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  padding-top: 20px;
+  padding-bottom: 2px;
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.4);
 }
 header img {
   width: 140px;
   object-fit: cover;
-  border: 2px solid blue;
 }
 
 .header__logo {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 2rem;
 }
 
 .contentLogo {
-  height: 125px;
+  height: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

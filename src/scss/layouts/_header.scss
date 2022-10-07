@@ -3,22 +3,20 @@
 header {
     position: relative;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    box-shadow: 0 2px 5px rgb(0 0 0 / 40%);
+    padding-top: 20px;
+    padding-bottom: 2px;
+    box-shadow: 0 2px 0px rgb(0 0 0 / 40%);
 
 img{
         width: 140px;
         object-fit: cover;
-        border: 2px solid blue;
 }
 }
 .header__logo{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 2rem;
 }
 .contentLogo{
-    height: 125px;
+    height: 10px;
 }
-
