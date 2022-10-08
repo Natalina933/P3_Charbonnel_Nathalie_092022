@@ -26,6 +26,11 @@ body {
   margin: 0 auto;
 }
 
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+
 .mapContent {
   display: flex;
   height: 50px;
@@ -80,7 +85,10 @@ button {
   gap: 15px;
   align-items: center;
   border: #c9c9c9 2px solid;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   border-radius: 50px;
+  cursor: pointer;
+  background: #F5F5F5;
 }
 .selection i {
   color: grey;
@@ -89,6 +97,29 @@ button {
 .selection {
   border: #ff79da 2px solid;
   gap: 15px;
+}
+
+ol li::before {
+  content: counter(li);
+  background: #9356dc;
+  color: #fff;
+  display: inline-block;
+  aspect-ratio: 1/1;
+  width: 28px;
+  border-radius: 50%;
+  border: #deebff 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  counter-increment: li;
+}
+
+a {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /*style principal*/
