@@ -1,5 +1,9 @@
 
-.mapContent{
+
+:root {
+    --pink-light: #ff7eb4;
+    --pink: #ff2581;
+  }.mapContent{
     display: flex;
     height: 50px;
     padding-top: 1rem;
@@ -45,18 +49,22 @@ button{
     flex-direction: column;
     border: maroon 2px solid;
     background: #fafafa;
+    gap: 15px;
     padding: 25px 25px 52px 25px;
 }
 .selection {
     li{
-    height: 50px;
-    gap: 15px;
-    align-items: center;
-    border: #c9c9c9 2px solid;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 40%);
-    border-radius: 50px;
-    cursor: pointer;
-    background: #F5F5F5;    
+        display: flex;
+        position: relative;
+        height: 50px;
+        align-items: center;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 40%);
+        border-radius: 50px;
+        cursor: pointer;
+        background: #F5F5F5;
+        padding-left: 33px;
+        justify-content: flex-start;
+        gap: 26px;
 }
     i{
         color: grey;
@@ -71,7 +79,9 @@ ol li::before {
     content: counter(li);   
     background: #9356dc;
     color: #fff;  
-    display: inline-block;  
+    display: inline-block; 
+    position: absolute; 
+    left: 0;
     aspect-ratio: 1 / 1;
     width: 28px;
     border-radius: 50%;
@@ -79,14 +89,155 @@ ol li::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translatex(-50%);
     } 
     li {counter-increment: li
     }
-a{
+/*section Restaurant*/
+
+/*******Hébergement*********/
+.contentRestaurants {
     display: flex;
-    justify-content: space-evenly;
+    gap: 32px;
 }
 
-ol{
-
+.contentCard h3 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: large;
 }
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.contentCard {
+    background: #f2f2f2;
+    padding: 32px;
+    flex: 2;
+    border-radius: 20px;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.contentCard h4 {
+    margin-top: 41px;
+}
+
+.styleCard {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.styleCard:hover {
+    transform: scale(1);
+    background: #3fadc3;
+    padding: 2px;
+    transition: 1s;
+}
+
+.contentCard .styleTextCard h4,
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contentCard img {
+    object-fit: cover;
+    background-position: center;
+    width: 100%;
+    height: 150px;
+}
+.new{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    background: #96DAC8;
+    color: #399658;
+    margin-left: 14rem;
+    margin-top: 1rem;
+}
+.heart{
+        height: 10vh;
+        display: grid;
+    }
+    .icon {
+        fill: transparent;
+        stroke: var(--pink);
+        stroke-width: 20;
+        cursor: pointer;
+        position: relative;
+        svg {
+            overflow: visible;
+            width: 2rem;
+        }
+        path {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 1550;
+            transform-origin: center;
+        }
+        .heart-background {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            stroke: none;
+        }
+        .heart-main:hover path {
+            animation: stroke-animation 2s ease-in-out forwards;
+        }
+        .heart-main:hover ~ .heart-background path {
+            animation: fade-animation 2s ease-in-out forwards;
+        }
+    }
+        @keyframes stroke-animation {
+        0% {
+            stroke-dashoffset: 0;
+        }
+        30% {
+            stroke-dashoffset: 1550;
+        }
+        60% {
+            stroke-dashoffset: 3100;
+            fill: transparent;
+            transform: scale(1);
+        }
+        80% {
+            fill: var(--pink);
+            transform: scale(1.1);
+        }
+        90% {
+            transform: scale(1);
+        }
+        100% {
+            stroke-dashoffset: 3100;
+            fill: var(--pink);
+        }
+    }
+    @keyframes fade-animation {
+        70% {
+            fill: transparent;
+            transform: scale(1);
+    }
+        80% {
+            fill: var(--pink-light);
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: scale(2.5);
+            opacity: 0;
+        }
+    }
+
+
