@@ -21,6 +21,8 @@ a {
 
 body {
   font-family: "roboto", Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
 }
 
 .content {
@@ -99,6 +101,8 @@ button {
   padding-left: 33px;
   justify-content: flex-start;
   gap: 26px;
+  max-width: 89%;
+  min-width: 40%;
 }
 .selection i {
   color: grey;
@@ -106,6 +110,10 @@ button {
 
 .selection {
   border: #ff79da 2px solid;
+  gap: 15px;
+}
+
+.selection ol {
   gap: 15px;
 }
 
@@ -209,7 +217,7 @@ p {
 
 .icon {
   fill: transparent;
-  stroke: var(--pink);
+  stroke: "pink";
   stroke-width: 20;
   cursor: pointer;
   position: relative;
@@ -298,7 +306,7 @@ header {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 2px;
-  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
 }
 header img {
   width: 140px;
