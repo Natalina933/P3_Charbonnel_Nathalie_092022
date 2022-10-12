@@ -1,0 +1,26 @@
+@use "../utils/" as *;
+footer {
+    position: relative;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 12px;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 40%);
+    background: $dark;
+    color: white;
+    gap: 10px;
+
+img{
+        width: 110px;
+        object-fit: cover;
+
+}
+span{
+    display: flex;
+    gap: 1rem;
+}
+h3{
+    font-size: smaller;
+    font-weight: 400;
+}
+
+}

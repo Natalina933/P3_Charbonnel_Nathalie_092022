@@ -1,27 +1,23 @@
+@use "../utils/" as *;
 
-
-:root {
-    --pink-light: #ff7eb4;
-    --pink: #ff2581;
-}
 .mapContent{
     display: flex;
     height: 50px;
-    padding-top: 1rem;
-    padding-bottom: 0;
     justify-content: center;
-    background-color: rgb(244, 242, 242);
-    font-weight: 400;
+    align-items: center;
+    background-color: #f3f2f2;
     font-size: small;
     box-shadow: 0 2px 0px rgb(0 0 0 / 40%);
+    gap: 15px;
 
-    h3{
-        padding-left: 10px;
-        }
+
+}
+.mapContent i{
+        font-size: 1rem;
 }
 .exploreContent {
     display: flex;
-    justify-content: space-around;
+    // justify-content: space-around;
     flex-direction: column;
     align-items: center;
     background: #fafafa;
@@ -33,55 +29,55 @@
 }
 button{
     font-size: 16px;
-    background: linear-gradient(#ff79da, #9356dc);
+    @include gradient;
     color: #fff;
     border: none;
     border-radius: 50px;
     width: 220px;
     height: 50px;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 40%);
+    // box-shadow: 0 5px 10px rgb(0 0 0 / 40%);
+    @include boxshadows;
     cursor: pointer;
     transition: 0.5s;
 
 }
-
 .functioningContent{
     display: flex;
     flex-direction: column;
     border: maroon 2px solid;
-    background: #fafafa;
-    gap: 15px;
     padding: 25px 25px 52px 25px;
+    h2{
+        padding: 1.5rem 1rem;
+    }
 }
 .selection {
+    border: #ff79da 2px solid;
+    height: 150px;
     li{
         display: flex;
+        justify-content: space-around;
         position: relative;
         height: 50px;
+        flex: 1;
+        gap: 1rem;
         align-items: center;
-        box-shadow: 0 5px 10px rgb(0 0 0 / 40%);
+        // box-shadow: 0 5px 10px rgb(0 0 0 / 40%);
+        @include boxshadows;
         border-radius: 50px;
         cursor: pointer;
         background: #F5F5F5;
         padding-left: 33px;
         justify-content: flex-start;
-        gap: 26px;
-        max-width: 89%;
-        min-width: 40%;
+}
+    ol{
+        gap: 1rem;
 }
     i{
         color: grey;
-    }
 }
-.selection {
-    border: #ff79da 2px solid;
-    gap: 15px;
-}
-.selection ol{
-    gap: 15px;
-
 }
 
+.selection 
 ol li::before {
     content: counter(li);   
     background: #9356dc;
@@ -173,11 +169,11 @@ p {
 }
 .heart{
         height: 10vh;
-        display: grid;
+        display: flex;
     }
     .icon {
         fill: transparent;
-        stroke: 'pink';
+        stroke: $primary;
         stroke-width: 20;
         cursor: pointer;
         position: relative;
@@ -217,7 +213,7 @@ p {
             transform: scale(1);
         }
         80% {
-            fill: var(--pink);
+            fill: $primary;
             transform: scale(1.1);
         }
         90% {
@@ -225,7 +221,7 @@ p {
         }
         100% {
             stroke-dashoffset: 3100;
-            fill: var(--pink);
+            fill: $primary;
         }
     }
     @keyframes fade-animation {
@@ -234,7 +230,8 @@ p {
             transform: scale(1);
     }
         80% {
-            fill: var(--pink-light);
+            fill: $secondary;
+            @include gradient;
             transform: scale(1.1);
             opacity: 1;
         }

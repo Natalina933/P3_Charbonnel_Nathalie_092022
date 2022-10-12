@@ -18,4 +18,15 @@ h4,
 p {
     margin: 9px;
 }
+/*Mixins*/
+
+@mixin boxshadows{
+    box-shadow: 0 5px 10px rgb(0 0 0 / 40%);
+}
+@mixin zoom {
+    transform: scale(1.02);
+}
+@mixin gradient{
+    background: linear-gradient(#ff79da, #9356dc);
+}
 
