@@ -23,11 +23,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header class="header">
+    <nav class="menuContent">
         <div class="header--return_homePage">
             <div class="header--arrow">
                 <a href="./index.html">
-                    <i class="fa-regular fa-arrow-left"></i>
+                    <i class="fa-solid fa-arrow-left">
+                    </i>                
                 </a>
             </div>
                 <div class="header--homePage">
@@ -37,10 +38,10 @@
         <div class="header--menu">
         <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
         </div>
-    </header>
+    
     <main class="selectionMenu">
-        <div class="selection--title">
-            <h1>La palette du goût</h1>
+        <div class="selection-title">
+            <h1 class="title">La palette du goût</h1>
                 <!--Heart-->
                     <div class="heart">
                         <div class="icon">
@@ -55,23 +56,29 @@
         </div>
         <!--Entrées-->
         <div class="selection--content">
-            <h3>Entrées</h3>
+            
+            <div class="categoryMenu-title">
+                <h3>Entrées</h3>
+            </div>
+        </nav>  
             <section class="selection--menu">
-                <div class="selection--title">
-                    <h3>Fricassée d'escargot </h3>
-                        <p>Au piment d'Espelette</p> 
-                </div>
-                <div class="menu--PriceCheck">
-                    <div class="menu--price">
-                        <span>25€</span>
+                <div class="menuContent animat">
+                    <div class="selection--description">
+                        <h3>Fricassée d'escargot </h3>
+                            <p>Au piment d'Espelette</p>
                     </div>
-                    <div class="menu--check">
-                        <i class="fa-solid fa-circle-check meal--icon"></i>
+                    <div class="menu--priceCheck">
+                        <div class="menu--price">
+                            <span>25€</span>
+                        </div>
+                        <div class="menu--check">
+                            <i class="fa-solid fa-circle-check meal--icon"></i>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="selection--menu">
-                <div class="selection--title">
+                <div class="selection--description">
                     <h3>Foie gras de canard mi-cuit</h3>
                     <p>Et ses copeaux de truffe noire </p>
                 </div>

@@ -7,7 +7,7 @@ $pink: #ff2581;
 
 /*style principal*/
 
-.titre{
+.title{
     font-family: 'shrikhand', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .titre p {
@@ -28,5 +28,14 @@ p {
 }
 @mixin gradient{
     background: linear-gradient(#ff79da, #9356dc);
+}
+@mixin highlight {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    font-weight: 700;
+    
+    
 }
 
