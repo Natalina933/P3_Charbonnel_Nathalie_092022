@@ -1,10 +1,12 @@
 @use "../utils/" as *;
 
 /******section Menu*********/
+        /***header***/
 .menuContent{
     background-color: #f4f4f4;
     position: relative;
     text-align: center;
+    padding-top: 20px;
     padding-bottom: 2px;
     
     .header--homePage img{

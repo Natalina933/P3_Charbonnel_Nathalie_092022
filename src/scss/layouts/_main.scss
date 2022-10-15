@@ -44,24 +44,19 @@ button{
 .functioningContent{
     display: flex;
     flex-direction: column;
-    border: maroon 2px solid;
     padding: 25px 25px 52px 25px;
     h2{
         padding: 1.5rem 1rem;
     }
 }
 .selection {
-    border: #ff79da 2px solid;
-    height: 150px;
     li{
         display: flex;
         justify-content: space-around;
         position: relative;
         height: 50px;
-        flex: 1;
         gap: 1rem;
         align-items: center;
-        // box-shadow: 0 5px 10px rgb(0 0 0 / 40%);
         @include boxshadows;
         border-radius: 50px;
         cursor: pointer;
@@ -69,13 +64,22 @@ button{
         padding-left: 33px;
         justify-content: flex-start;
 }
+
     ol{
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
 }
     i{
         color: grey;
 }
+
+h3{
+    font-size: inherit;
+    font-weight: inherit;
 }
+}
+
 
 .selection 
 ol li::before {
@@ -95,9 +99,8 @@ ol li::before {
     transform: translatex(-50%);
     } 
     li {counter-increment: li}
-/*section Restaurant*/
 
-/*******Hébergement*********/
+/*******section Restaurant*********/
 .contentRestaurants {
     display: flex;
     gap: 32px;
@@ -120,16 +123,13 @@ ol li::before {
     background: #f2f2f2;
     padding: 32px;
     flex: 2;
-    border-radius: 20px;
-    justify-content: space-between;
-    gap: 32px;
+    border-radius: 20px 20px 0 0;    justify-content: space-between;
 }
 
-.contentCard h4 {
-    margin-top: 41px;
-}
+
 
 .styleCard {
+    position: relative;
     flex: 1;
     min-width: 200px;
     background: white;
@@ -145,30 +145,37 @@ ol li::before {
     transition: 1s;
 }
 
-.contentCard .styleTextCard h4,
-p {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.contentCard {
+    h2{
+        padding-bottom: 1rem;
+    }
+    
+}
+.contentTextCard{
+    display: flex;
+    justify-content: space-between;
 }
 
 .contentCard img {
     object-fit: cover;
     background-position: center;
     width: 100%;
-    height: 150px;
+    height: 160px;
 }
 .new{
     display: flex;
+    padding: 5px 15px;
     flex-direction: row;
     position: absolute;
     background: #96DAC8;
     color: #399658;
-    margin-left: 14rem;
     margin-top: 1rem;
+    right: 1rem ;
 }
 .heart{
         height: 10vh;
         display: flex;
+        padding: 20px 20px;
     }
     .icon {
         fill: transparent;
