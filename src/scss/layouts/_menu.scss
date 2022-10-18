@@ -2,7 +2,7 @@
 
 /******section Menu*********/
 /***header***/
-.menuContentLogo {
+.header {
   position: relative;
   text-align: center;
   padding-top: 20px;
@@ -96,9 +96,10 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  text-overflow: ellipsis;
+
   background: #fff;
   border: 2px solid pink;
-  gap: 15px;
   border-radius: 15px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 40%);
   &__content {
@@ -118,7 +119,6 @@
       opacity: 0.7;
       margin: 5px 0 15px 10px;
       overflow: hidden;
-      text-overflow: ellipsis;
     }
   }
   .menu--priceCheck {
@@ -139,9 +139,11 @@
         i {
             font-size: 25px;
             padding: 25px;
-            transform: rotateZ(-180deg);
-            transition: 0.8s;
+            // transform: rotateZ(-180deg);
+            // transition: 0.8s;
         }
+        
     }
+
     }
 }
