@@ -20,8 +20,11 @@ p {
 }
 /*Mixins*/
 
-@mixin boxshadows{
+@mixin boxshadowsDark{
     box-shadow: 0 5px 10px rgb(0 0 0 / 40%);
+}
+@mixin boxshadowsLight{
+    box-shadow: 0 5px 10px rgba(145, 145, 145, 0.4);
 }
 @mixin zoom {
     transform: scale(1.02);
@@ -35,7 +38,5 @@ p {
     padding-bottom: 10px;
     margin-left: 20px;
     font-weight: 700;
-    
-    
 }
 

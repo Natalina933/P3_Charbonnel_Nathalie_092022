@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -48,26 +49,180 @@ p {
 }
 
 /*Mixins*/
+/******section Menu*********/
+/***header***/
+.header {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+.header .header--homePage img {
+  width: 53%;
+}
+.header .header--return_homePage {
+  display: flex;
+  font-size: 23px;
+  padding-left: 15px;
+  transition: 0.5s;
+}
+.header .header--arrow {
+  display: flex;
+}
+
+.selectionMenu {
+  position: absolute;
+}
+.selectionMenu .selection--img img {
+  width: 100%;
+  object-fit: cover;
+}
+.selectionMenu .selection--title {
+  display: flex;
+  background: #f2f2f2;
+  border-radius: 50px 50px 0 0;
+  padding-top: 20px;
+}
+.selectionMenu h1 {
+  font-size: 28px;
+  text-align: left;
+  padding-left: 20px;
+}
+.selectionMenu .heart {
+  display: flex;
+  font-size: 2px;
+  padding-left: 23px;
+  padding-top: 10px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.contentAllCard {
+  background: #f2f2f2;
+}
+
+.categoryMenu-title {
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.categoryMenu-title ::after {
+  content: "";
+  background: #99e2d0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 5px;
+}
+
+.menuContent {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 2px;
+}
+
+.card {
+  width: 500px;
+  /* Width à supprimer pour    une adaptation responsive */
+  display: flex;
+  justify-content: space-between;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 1px 1px 3px rgba(180, 180, 180, 0.9);
+  transition: all 0.5s ease-in-out;
+}
+
+.card__content {
+  padding: 5px 15px;
+  align-self: center;
+  overflow: hidden;
+}
+
+.card__content h4, .card__content p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  margin-right: -68px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card__price span {
+  font-weight: 700;
+  padding-top: 10px;
+  align-self: center;
+}
+
+.card__price .check {
+  height: 70px;
+  padding: 0 25px;
+  background-color: green;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.fa-regular {
+  align-self: center;
+  transform: rotate(180deg);
+  transition: all 0.7s ease-in-out;
+  color: #fff;
+}
+
+.card:hover {
+  background: aqua;
+}
+
+.card:hover .card__price {
+  margin-right: 0;
+}
+
+.card:hover .fa-regular {
+  transform: rotate(360deg);
+}
+
+/***section search***/
 .mapContent {
   display: flex;
-  height: 50px;
+  height: 60px;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #e8e1e1;
   font-size: small;
-  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.4);
-  gap: 15px;
+  gap: 12px;
 }
 
 .mapContent i {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  padding-left: 15px;
+}
+
+form input[type=text] {
+  border: none;
+  background-color: #e8e1e1;
+}
+form input[type=text]::placeholder {
+  color: black;
+  font-weight: 700;
+  justify-content: baseline;
+  font-size: 15px;
 }
 
 .exploreContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;
+  background: #f0ebeb;
   padding: 25px 25px 52px 25px;
 }
 .exploreContent .explore {
@@ -75,6 +230,7 @@ p {
   margin-bottom: 15px;
 }
 
+/***section button***/
 button {
   font-size: 16px;
   background: linear-gradient(#ff79da, #9356dc);
@@ -85,9 +241,13 @@ button {
   height: 50px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  transition: 0.5s;
 }
 
+button:hover {
+  filter: contrast(92%) brightness(1.2) drop-shadow(0px 5px 10px #444343);
+}
+
+/***section funtioning***/
 .functioningContent {
   display: flex;
   flex-direction: column;
@@ -97,38 +257,37 @@ button {
   padding: 1.5rem 1rem;
 }
 
-.selection li {
+.funtioningList li {
   display: flex;
-  justify-content: space-around;
   position: relative;
   height: 50px;
   gap: 1rem;
   align-items: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(145, 145, 145, 0.4);
   border-radius: 50px;
   cursor: pointer;
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding-left: 33px;
   justify-content: flex-start;
 }
-.selection ol {
+.funtioningList ol {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.selection i {
+.funtioningList i {
   color: grey;
 }
-.selection h3 {
+.funtioningList h3 {
   font-size: inherit;
   font-weight: inherit;
 }
 
-.selection ol li::before {
+/***Order list***/
+.funtioningList ol li::before {
   content: counter(li);
   background: #9356dc;
   color: #fff;
-  display: inline-block;
   position: absolute;
   left: 0;
   aspect-ratio: 1/1;
@@ -145,7 +304,15 @@ li {
   counter-increment: li;
 }
 
-/*******section Restaurant*********/
+ol :hover {
+  background-color: #dfd3e7;
+  filter: drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
+}
+ol :hover i {
+  color: #9356dc;
+}
+
+/*******section Card Restaurant*********/
 .contentRestaurants {
   display: flex;
   gap: 32px;
@@ -203,10 +370,11 @@ li {
   padding: 5px 15px;
   flex-direction: row;
   position: absolute;
-  background: #96DAC8;
+  background: #96dac8;
   color: #399658;
   margin-top: 1rem;
   right: 1rem;
+  border-radius: 2px;
 }
 
 .heart {
@@ -332,149 +500,6 @@ footer span {
 footer h3 {
   font-size: smaller;
   font-weight: 400;
-}
-
-/******section Menu*********/
-/***header***/
-.header {
-  position: relative;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 2px;
-}
-.header .header--homePage img {
-  width: 53%;
-}
-.header .header--return_homePage {
-  display: flex;
-  font-size: 23px;
-  padding-left: 15px;
-  transition: 0.5s;
-}
-.header .header--menu img {
-  display: block;
-  width: 100%;
-  height: 225px;
-  margin-top: 20px;
-  position: absolute;
-  object-fit: cover;
-}
-.header .header--arrow {
-  display: flex;
-}
-.header .selectionMenu {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-top: 188px;
-}
-.header .selection-title {
-  display: flex;
-  background: #f2f2f2;
-  width: 100%;
-  border-radius: 50px 50px 0 0;
-  padding-top: 20px;
-  overflow: hidden;
-}
-.header .selection--title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 22px;
-}
-.header h1 {
-  font-size: 28px;
-  text-align: left;
-  padding-left: 20px;
-}
-.header .heart {
-  display: flex;
-  font-size: 2px;
-  padding-left: 23px;
-  padding-top: 10px;
-  align-items: flex-start;
-  cursor: pointer;
-}
-
-.contentAllCard {
-  background: #f2f2f2;
-}
-
-.categoryMenu-title {
-  text-align: left;
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 10px;
-  margin-left: 20px;
-  font-weight: 700;
-  font-size: 20px;
-}
-.categoryMenu-title ::after {
-  content: "";
-  background: #99e2d0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 5px;
-}
-
-.menuContent {
-  position: relative;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 2px;
-}
-
-.card {
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  background: #fff;
-  border: 2px solid pink;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-}
-.card__content {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  cursor: pointer;
-}
-.card__content h3 {
-  margin: 15px 0 0 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: 400;
-}
-.card__content p {
-  opacity: 0.7;
-  margin: 5px 0 15px 10px;
-  overflow: hidden;
-}
-.card .menu--priceCheck {
-  display: flex;
-}
-.card .menu--priceCheck .menu--price {
-  display: flex;
-  align-items: flex-end;
-  margin: 0 30px 15px 10px;
-}
-.card .menu--priceCheck .menu--check {
-  background-color: #99e2d0;
-  height: 100%;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  border-radius: 0 15px 15px 0;
-  margin-right: 0px;
-}
-.card .menu--priceCheck .menu--check i {
-  font-size: 25px;
-  padding: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
