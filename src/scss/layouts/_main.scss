@@ -11,17 +11,17 @@
 }
 .mapContent i {
     font-size: 1.2rem;
-    padding-left: 15px;
+    padding-left: 35px;
 }
 form {
-    input[type="text"] {
+  input[type="text"] {
+        text-overflow: ellipsis;
         border: none;
         background-color: #e8e1e1;
         &::placeholder {
-        color: black;
+        opacity: 0.8; 
         font-weight: 700;
-        justify-content: baseline;
-        font-size: 15px;
+        justify-content: end;
         }
     }
 }
@@ -37,22 +37,9 @@ form {
     }
 }
 /***section button***/
+button{
 
-button {
-    font-size: 16px;
-    @include gradient;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    width: 220px;
-    height: 50px;
-    @include boxshadowsDark;
-    cursor: pointer;
-    // transition: 0.5s;
-}
-
-button:hover {
-    filter: contrast(92%) brightness(1.2) drop-shadow(0px 5px 10px rgb(68, 67, 67));
+  @include button;
 }
 
 /***section funtioning***/
@@ -62,14 +49,14 @@ button:hover {
     flex-direction: column;
     padding: 25px 25px 52px 25px;
     h2 {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 0 1rem 0;
     }
     }
     .funtioningList {
     li {
         display: flex;
-        position: relative;
-        height: 50px;
+        position: relative; 
+        height: 75px;
         gap: 1rem;
         align-items: center;
         @include boxshadowsLight;
@@ -83,7 +70,7 @@ button:hover {
     ol {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     i {
         color: grey;
@@ -91,8 +78,8 @@ button:hover {
 
     h3 {
         font-size: inherit;
-        font-weight: inherit;
-    }
+        font-weight: 500;
+      }
 }
 
 /***Order list***/
@@ -103,7 +90,7 @@ button:hover {
     position: absolute;
     left: 0;
     aspect-ratio: 1 / 1;
-    width: 28px;
+    width: 33px;
     border-radius: 50%;
     border: #deebff 2px solid;
     display: flex;
@@ -117,7 +104,6 @@ button:hover {
 
 ol :hover {
     background-color: #dfd3e7;
-    
     i {
         color: #9356dc;
     }
@@ -125,28 +111,38 @@ ol :hover {
 }
 
 /*******section Card Restaurant*********/
-.contentRestaurants {
-  display: flex;
-  gap: 32px;
-}
-
-.contentCard h3 {
-  margin: 0;
-  margin-bottom: 16px;
-  font-size: large;
-}
-
-.contentCard {
+.menus {
   background: #f2f2f2;
-  padding: 32px;
-  flex: 2;
-  border-radius: 20px 20px 0 0;
-  justify-content: space-between;
-}
+  padding: 25px 25px 52px 25px;
+  h2 {
+    padding: 1.5rem 0 1rem 0;
+  }
 
+  &__Cards {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 1.5rem;
+    border-radius: 20px 20px 0 0;
+    justify-content: space-between;
+    h3 {
+      margin: 0;
+      margin-bottom: 16px;
+      font-size: large;
+    }
+    @media (min-width:$breakpointtablet) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+  }
+  
+}
 .styleCard {
   position: relative;
-  flex: 1;
   min-width: 200px;
   background: white;
   border-radius: 12px;
@@ -154,24 +150,19 @@ ol :hover {
   cursor: pointer;
 }
 
-.styleCard:hover {
-  transform: scale(1);
-  background: #3fadc3;
-  padding: 2px;
-  transition: 1s;
-}
+// .styleCard:hover {
+//   transform: scale(1);
+//   background: #3fadc3;
+//   padding: 2px;
+//   transition: 1s;
+// }
 
-.contentCard {
-  h2 {
-    padding-bottom: 1rem;
-  }
-}
 .contentTextCard {
   display: flex;
   justify-content: space-between;
 }
 
-.contentCard img {
+.menus__Cards img {
   object-fit: cover;
   background-position: center;
   width: 100%;
@@ -184,10 +175,15 @@ ol :hover {
   position: absolute;
   background: #96dac8;
   color: #399658;
-  margin-top: 1rem;
+  top: 1rem;
   right: 1rem;
   border-radius: 2px;
+
 }
+.newNone{
+  display: none;
+}
+
 .heart {
   height: 10vh;
   display: flex;
@@ -195,7 +191,7 @@ ol :hover {
 }
 .icon {
   fill: transparent;
-  stroke: $primary;
+  stroke: $dark;
   stroke-width: 20;
   cursor: pointer;
   position: relative;
@@ -235,7 +231,7 @@ ol :hover {
     transform: scale(1);
   }
   80% {
-    fill: $primary;
+    fill: $gradient;
     transform: scale(1.1);
   }
   90% {
@@ -243,7 +239,7 @@ ol :hover {
   }
   100% {
     stroke-dashoffset: 3100;
-    fill: $primary;
+    fill: $gradient;
   }
 }
 @keyframes fade-animation {
@@ -252,8 +248,7 @@ ol :hover {
     transform: scale(1);
   }
   80% {
-    fill: $secondary;
-    @include gradient;
+    fill: $gradient;
     transform: scale(1.1);
     opacity: 1;
   }

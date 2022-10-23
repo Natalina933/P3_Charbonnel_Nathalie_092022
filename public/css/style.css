@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -25,10 +24,6 @@ body {
   padding: 0;
 }
 
-.content {
-  margin: 0 auto;
-}
-
 ol {
   list-style: none;
   counter-reset: li;
@@ -39,10 +34,6 @@ ol {
   font-family: "shrikhand", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.title, h2 {
-  padding-bottom: 1rem;
-}
-
 h4,
 p {
   margin: 9px;
@@ -51,21 +42,21 @@ p {
 /*Mixins*/
 /******section Menu*********/
 /***header***/
-.header {
+.content {
   position: relative;
   text-align: center;
   justify-content: center;
 }
-.header .header--homePage img {
+.content .header--homePage img {
   width: 53%;
 }
-.header .header--return_homePage {
+.content .header--return_homePage {
   display: flex;
   font-size: 23px;
   padding-left: 15px;
   transition: 0.5s;
 }
-.header .header--arrow {
+.content .header--arrow {
   display: flex;
 }
 
@@ -111,6 +102,7 @@ p {
 }
 .categoryMenu-title ::after {
   content: "";
+  padding-bottom: 12px;
   background: #99e2d0;
   position: absolute;
   bottom: 0;
@@ -127,32 +119,45 @@ p {
 }
 
 .card {
-  width: 500px;
-  /* Width à supprimer pour    une adaptation responsive */
   display: flex;
   justify-content: space-between;
-  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 1px 1px 3px rgba(180, 180, 180, 0.9);
+  text-overflow: ellipsis;
+  background: #fff;
+  border: 2px solid pink;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  min-width: 0;
+  cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-
 .card__content {
-  padding: 5px 15px;
-  align-self: center;
   overflow: hidden;
+  flex-direction: column;
+  align-self: center;
 }
-
-.card__content h4, .card__content p {
+.card__content .card__content h3, .card__content .card__content p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.card__content h3 {
+  margin: 15px 0 0 10px;
+  white-space: nowrap;
+  font-weight: 400;
+  padding-right: 10px;
+  width: 100%;
+}
+.card__content p {
+  opacity: 0.7;
+  margin: 5px 0 15px 10px;
+  overflow: hidden;
+}
 
 .card__price {
   display: flex;
-  align-items: flex-end;
   gap: 15px;
+  align-items: flex-end;
   margin-right: -68px;
   transition: all 0.5s ease-in-out;
 }
@@ -163,32 +168,25 @@ p {
   align-self: center;
 }
 
-.card__price .check {
+.card__price .card__check {
   height: 70px;
   padding: 0 25px;
-  background-color: green;
+}
+
+.card__check {
+  background-color: #99e2d0;
+  height: 70px;
   color: #fff;
   display: flex;
   align-items: center;
+  border-radius: 0 15px 15px 0;
+  margin-right: 0px;
 }
-
-.fa-regular {
-  align-self: center;
-  transform: rotate(180deg);
-  transition: all 0.7s ease-in-out;
-  color: #fff;
-}
-
-.card:hover {
-  background: aqua;
-}
-
-.card:hover .card__price {
-  margin-right: 0;
-}
-
-.card:hover .fa-regular {
-  transform: rotate(360deg);
+.card__check i {
+  font-size: 25px;
+  padding: 25px;
+  transform: rotateZ(-180deg);
+  transition: 0.8s;
 }
 
 /***section search***/
@@ -204,18 +202,18 @@ p {
 
 .mapContent i {
   font-size: 1.2rem;
-  padding-left: 15px;
+  padding-left: 35px;
 }
 
 form input[type=text] {
+  text-overflow: ellipsis;
   border: none;
   background-color: #e8e1e1;
 }
 form input[type=text]::placeholder {
-  color: black;
+  opacity: 0.8;
   font-weight: 700;
-  justify-content: baseline;
-  font-size: 15px;
+  justify-content: end;
 }
 
 .exploreContent {
@@ -241,9 +239,9 @@ button {
   height: 50px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  transition: 0.5s;
 }
-
-button:hover {
+button button:hover {
   filter: contrast(92%) brightness(1.2) drop-shadow(0px 5px 10px #444343);
 }
 
@@ -254,13 +252,13 @@ button:hover {
   padding: 25px 25px 52px 25px;
 }
 .functioningContent h2 {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 0 1rem 0;
 }
 
 .funtioningList li {
   display: flex;
   position: relative;
-  height: 50px;
+  height: 75px;
   gap: 1rem;
   align-items: center;
   box-shadow: 0 5px 10px rgba(145, 145, 145, 0.4);
@@ -273,14 +271,14 @@ button:hover {
 .funtioningList ol {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .funtioningList i {
   color: grey;
 }
 .funtioningList h3 {
   font-size: inherit;
-  font-weight: inherit;
+  font-weight: 500;
 }
 
 /***Order list***/
@@ -291,7 +289,7 @@ button:hover {
   position: absolute;
   left: 0;
   aspect-ratio: 1/1;
-  width: 28px;
+  width: 33px;
   border-radius: 50%;
   border: #deebff 2px solid;
   display: flex;
@@ -313,28 +311,39 @@ ol :hover i {
 }
 
 /*******section Card Restaurant*********/
-.contentRestaurants {
-  display: flex;
-  gap: 32px;
+.menus {
+  background: #f2f2f2;
+  padding: 25px 25px 52px 25px;
 }
-
-.contentCard h3 {
+.menus h2 {
+  padding: 1.5rem 0 1rem 0;
+}
+.menus__Cards {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 1.5rem;
+  border-radius: 20px 20px 0 0;
+  justify-content: space-between;
+}
+.menus__Cards h3 {
   margin: 0;
   margin-bottom: 16px;
   font-size: large;
 }
-
-.contentCard {
-  background: #f2f2f2;
-  padding: 32px;
-  flex: 2;
-  border-radius: 20px 20px 0 0;
-  justify-content: space-between;
+@media (min-width: 1000px) {
+  .menus__Cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
 }
 
 .styleCard {
   position: relative;
-  flex: 1;
   min-width: 200px;
   background: white;
   border-radius: 12px;
@@ -342,23 +351,12 @@ ol :hover i {
   cursor: pointer;
 }
 
-.styleCard:hover {
-  transform: scale(1);
-  background: #3fadc3;
-  padding: 2px;
-  transition: 1s;
-}
-
-.contentCard h2 {
-  padding-bottom: 1rem;
-}
-
 .contentTextCard {
   display: flex;
   justify-content: space-between;
 }
 
-.contentCard img {
+.menus__Cards img {
   object-fit: cover;
   background-position: center;
   width: 100%;
@@ -372,9 +370,13 @@ ol :hover i {
   position: absolute;
   background: #96dac8;
   color: #399658;
-  margin-top: 1rem;
+  top: 1rem;
   right: 1rem;
   border-radius: 2px;
+}
+
+.newNone {
+  display: none;
 }
 
 .heart {
@@ -385,7 +387,7 @@ ol :hover i {
 
 .icon {
   fill: transparent;
-  stroke: #9356DC;
+  stroke: #353535;
   stroke-width: 20;
   cursor: pointer;
   position: relative;
@@ -426,7 +428,7 @@ ol :hover i {
     transform: scale(1);
   }
   80% {
-    fill: #9356DC;
+    fill: linear-gradient(#ff79da, #9356dc);
     transform: scale(1.1);
   }
   90% {
@@ -434,7 +436,7 @@ ol :hover i {
   }
   100% {
     stroke-dashoffset: 3100;
-    fill: #9356DC;
+    fill: linear-gradient(#ff79da, #9356dc);
   }
 }
 @keyframes fade-animation {
@@ -443,8 +445,7 @@ ol :hover i {
     transform: scale(1);
   }
   80% {
-    fill: #FF79DA;
-    background: linear-gradient(#ff79da, #9356dc);
+    fill: linear-gradient(#ff79da, #9356dc);
     transform: scale(1.1);
     opacity: 1;
   }

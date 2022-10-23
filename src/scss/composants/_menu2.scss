@@ -1,0 +1,55 @@
+
+.card {
+    width: 500px;/* Width à supprimer pour    une adaptation responsive */
+    display: flex;
+    justify-content: space-between;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px rgba(180, 180, 180, .9);
+    transition: all .5s ease-in-out;
+  }
+  .card__content {
+    padding: 5px 15px;
+    align-self: center;
+    overflow: hidden;
+  }
+  .card__content h4, .card__content p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .card__price {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    transition: all .5s ease-in-out;
+  }
+  .card__price span {
+    font-weight: 700;
+    padding-top: 10px;
+    align-self: center;
+  }
+  .card__price .card__check {
+    height: 70px;
+    padding: 0 25px;
+    background-color: green;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    
+  }
+  .fa-regular {
+    align-self: center;
+    transform: rotate(180deg);
+    transition: all .7s ease-in-out;
+    color:#fff
+  }
+  .card:hover {
+  background: aqua;
+  }
+  .card:hover .card__price {
+    margin-right: 0;
+  }
+  .card:hover .fa-regular {
+    transform: rotate(360deg);
+  }
