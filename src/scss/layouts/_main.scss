@@ -200,6 +200,7 @@ ol :hover {
   stroke-width: 20;
   cursor: pointer;
   position: relative;
+  
   svg {
     overflow: visible;
     width: 1.2rem;
@@ -266,8 +267,13 @@ ol :hover {
   }
 }
 footer {
+  h2{
+    padding-bottom: 10px;
+  }
+
+
   a{
-    padding-top: 5px;
+    padding-top: 10px;
     display: flex;
     flex-direction: row;
     gap: 10px;

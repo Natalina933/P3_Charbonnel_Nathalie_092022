@@ -59,13 +59,12 @@
   text-align: left;
   text-transform: uppercase;
   position: relative;
-  padding-bottom: 10px;
   margin-left: 20px;
   font-weight: 700;
   font-size: 20px;
+  gap: 2px;
   ::after {
     content: "";
-    padding-bottom: 12px;
     background: #99e2d0;
     position: absolute;
     bottom: 0;
@@ -97,7 +96,8 @@
     // display: flex;
     overflow: hidden;
     flex-direction: column;
-    align-self: center  ;    // transition: 0.5s;
+    align-self: center  ;    
+    transition: 0.5s;
     .card__content h3, .card__content p {
       overflow: hidden;
       white-space: nowrap;
@@ -131,7 +131,7 @@
       align-self: center;    
 }
     .card__price .card__check{
-      height: 70px;
+      height: 86px;
       padding: 0 25px;
       
     }
