@@ -38,8 +38,10 @@ form {
 }
 /***section button***/
 button{
-
   @include button;
+}
+button:hover {
+    filter: contrast(92%) brightness(1.2) drop-shadow(0px 5px 10px rgb(68, 67, 67));
 }
 
 /***section funtioning***/
@@ -138,6 +140,7 @@ ol :hover {
         grid-column-gap: 10px;
         grid-row-gap: 10px;
     }
+
   }
   
 }
@@ -160,6 +163,8 @@ ol :hover {
 .contentTextCard {
   display: flex;
   justify-content: space-between;
+  transform: translateY(-10%);
+
 }
 
 .menus__Cards img {
@@ -231,7 +236,7 @@ ol :hover {
     transform: scale(1);
   }
   80% {
-    fill: $gradient;
+    fill:$primary;
     transform: scale(1.1);
   }
   90% {
@@ -239,7 +244,7 @@ ol :hover {
   }
   100% {
     stroke-dashoffset: 3100;
-    fill: $gradient;
+    fill: $primary;
   }
 }
 @keyframes fade-animation {
@@ -248,7 +253,7 @@ ol :hover {
     transform: scale(1);
   }
   80% {
-    fill: $gradient;
+    fill: $secondary;
     transform: scale(1.1);
     opacity: 1;
   }
@@ -259,4 +264,13 @@ ol :hover {
     transform: scale(2.5);
     opacity: 0;
   }
+}
+footer {
+  a{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
 }

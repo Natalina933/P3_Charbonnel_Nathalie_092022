@@ -7,8 +7,8 @@ $pink: #ff2581;
 $gradient: linear-gradient(#ff79da, #9356dc);
 /*style principal*/
 $breakpointmobile: 767px;
-$breakpointtablet:1000px;
-$breakpointdestop:1440px;
+$breakpointtablet: 1000px;
+$breakpointdestop: 1440px;
 
 .title{
     font-family: 'shrikhand', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -20,8 +20,7 @@ p {
     margin: 9px;
 }
 /*Mixins*/
-@mixin 
-    button {
+@mixin button {
         font-size: 16px;
         @include gradient;
         color: #fff;
@@ -32,9 +31,6 @@ p {
         @include boxshadowsDark;
         cursor: pointer;
         transition: 0.5s;    
-    button:hover {
-        filter: contrast(92%) brightness(1.2) drop-shadow(0px 5px 10px rgb(68, 67, 67));
-    }
 }
 @mixin boxshadowsDark{
     box-shadow: 0 5px 10px rgb(0 0 0 / 40%);

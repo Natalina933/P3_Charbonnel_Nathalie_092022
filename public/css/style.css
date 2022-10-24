@@ -241,7 +241,8 @@ button {
   cursor: pointer;
   transition: 0.5s;
 }
-button button:hover {
+
+button:hover {
   filter: contrast(92%) brightness(1.2) drop-shadow(0px 5px 10px #444343);
 }
 
@@ -354,6 +355,7 @@ ol :hover i {
 .contentTextCard {
   display: flex;
   justify-content: space-between;
+  transform: translateY(-10%);
 }
 
 .menus__Cards img {
@@ -428,7 +430,7 @@ ol :hover i {
     transform: scale(1);
   }
   80% {
-    fill: linear-gradient(#ff79da, #9356dc);
+    fill: #9356DC;
     transform: scale(1.1);
   }
   90% {
@@ -436,7 +438,7 @@ ol :hover i {
   }
   100% {
     stroke-dashoffset: 3100;
-    fill: linear-gradient(#ff79da, #9356dc);
+    fill: #9356DC;
   }
 }
 @keyframes fade-animation {
@@ -445,7 +447,7 @@ ol :hover i {
     transform: scale(1);
   }
   80% {
-    fill: linear-gradient(#ff79da, #9356dc);
+    fill: #FF79DA;
     transform: scale(1.1);
     opacity: 1;
   }
@@ -457,6 +459,13 @@ ol :hover i {
     opacity: 0;
   }
 }
+footer a {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 header {
   position: relative;
   text-align: center;
