@@ -45,12 +45,15 @@
     .heart {
       display: flex;
       font-size: 2px;
-      padding-left: 23px;
-      padding-top: 10px;
+      left: 77px;
+      top: 10px;
       align-items: flex-start;
       cursor: pointer;
     }
+    @include heart;
   }
+
+
 //cards
 .contentAllCard{
   background: #f2f2f2;

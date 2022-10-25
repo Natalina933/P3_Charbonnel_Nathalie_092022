@@ -40,6 +40,7 @@ p {
 }
 
 /*Mixins*/
+/*Heart*/
 /******section Menu*********/
 /***header***/
 .content {
@@ -81,10 +82,34 @@ p {
 .selectionMenu .heart {
   display: flex;
   font-size: 2px;
-  padding-left: 23px;
-  padding-top: 10px;
+  left: 77px;
+  top: 10px;
   align-items: flex-start;
   cursor: pointer;
+}
+.selectionMenu .heart {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 16px 0px;
+}
+.selectionMenu .icon {
+  position: relative;
+}
+.selectionMenu .icon i {
+  position: absolute;
+  right: 1rem;
+}
+.selectionMenu .icon .heart-background {
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: 2s ease-in-out forwards;
+}
+.selectionMenu .icon .heart-background:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .contentAllCard {
@@ -355,7 +380,6 @@ ol :hover i {
 .contentTextCard {
   display: flex;
   justify-content: space-between;
-  transform: translateY(-10%);
 }
 
 .menus__Cards img {
@@ -370,103 +394,42 @@ ol :hover i {
   padding: 5px 15px;
   flex-direction: row;
   position: absolute;
-  background: #96dac8;
-  color: #399658;
+  background: #99E2D0;
+  color: #1b6150;
   top: 1rem;
   right: 1rem;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .newNone {
   display: none;
 }
 
+/*Heart*/
 .heart {
-  height: 10vh;
   display: flex;
-  padding: 20px 20px;
+  font-size: 1.5rem;
+  padding: 16px 0px;
 }
 
 .icon {
-  fill: transparent;
-  stroke: #353535;
-  stroke-width: 20;
-  cursor: pointer;
   position: relative;
 }
-.icon svg {
-  overflow: visible;
-  width: 1.2rem;
-}
-.icon path {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1550;
-  transform-origin: center;
+.icon i {
+  position: absolute;
+  right: 1rem;
 }
 .icon .heart-background {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  stroke: none;
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: 2s ease-in-out forwards;
 }
-.icon .heart-main:hover path {
-  animation: stroke-animation 2s ease-in-out forwards;
-}
-.icon .heart-main:hover ~ .heart-background path {
-  animation: fade-animation 2s ease-in-out forwards;
-}
-
-@keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: #9356DC;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: #9356DC;
-  }
-}
-@keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: #FF79DA;
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
-}
-footer h2 {
-  padding-bottom: 10px;
-}
-footer a {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+.icon .heart-background:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 header {
@@ -494,25 +457,24 @@ header img {
 footer {
   position: relative;
   text-align: left;
-  padding-top: 20px;
-  padding-left: 30px;
+  padding: 20px;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
   background: #353535;
   color: white;
 }
-footer img {
-  width: 110px;
-  object-fit: cover;
-}
-footer span {
-  display: flex;
-  gap: 1rem;
-  padding-bottom: 10px;
-  align-items: baseline;
-}
 footer h3 {
   font-size: smaller;
   font-weight: 400;
+}
+footer h2 {
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+footer a {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
