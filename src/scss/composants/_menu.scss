@@ -8,13 +8,13 @@
   justify-content: center;
 
   .header--homePage img {
-    width: 53%;
+    width: 50%;
   }
   .header--return_homePage {
     display: flex;
     font-size: 23px;
     padding-left: 15px;
-    transition: 0.5s;
+    // transition: 0.5s;
   }
   
   .header--arrow {
@@ -43,11 +43,10 @@
       padding-left: 20px;
     }
     .heart {
-      display: flex;
       font-size: 2px;
-      left: 77px;
-      top: 10px;
-      align-items: flex-start;
+      padding-left: 77px;
+      // top: 10px;
+      // align-items: flex-start;
       cursor: pointer;
     }
     @include heart;
@@ -87,7 +86,6 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  text-overflow: ellipsis;
   background: #fff;
   border: 2px solid pink;
   border-radius: 15px;
@@ -96,27 +94,26 @@
   cursor: pointer;
   transition: all 0.5s ease-in-out ;
   &__content {
-    // display: flex;
     overflow: hidden;
     flex-direction: column;
     align-self: center  ;    
     transition: 0.5s;
-    .card__content h3, .card__content p {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-  }
+    flex: 1;
+    width: 0;
     h3 {
-      margin: 15px 0 0 10px;
       white-space: nowrap;
       font-weight: 400;
-      padding-right: 10px;
       width: 100%;
     }
     p {
       opacity: 0.7;
-      margin: 5px 0 15px 10px;
+      margin: 0;
+    }
+    h3,p{
+      padding-left: 10px;
       overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 }
@@ -124,9 +121,10 @@
       display: flex;
       gap: 15px;
       align-items: flex-end;
-      margin-right: -68px;
+      // margin-right: -68px;
       transition: all 0.5s ease-in-out ;
-
+      padding-inline: 1rem;
+      padding-block: 15px;
     }
     .card__price span{
       font-weight: 700;

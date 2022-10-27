@@ -15,10 +15,7 @@ $breakpointdestop: 1440px;
 }
 
 
-h4,
-p {
-    margin: 9px;
-}
+
 /*Mixins*/
 @mixin button {
         font-size: 16px;
@@ -56,8 +53,8 @@ p {
 .heart {
     display: flex;
     font-size: 1.5rem;
-    padding: 16px 0px;
-    }
+    
+}
     .icon {
         position: relative;
         i{
