@@ -41,8 +41,9 @@ button{
   @include button;
 }
 button:hover {
-    filter: contrast(92%) brightness(1.2) drop-shadow(0px 5px 10px rgb(68, 67, 67));
-}
+    filter: contrast(90%) brightness(1.09) drop-shadow(0px 5px 10px #444343);
+
+  }
 
 /***section funtioning***/
 
@@ -105,7 +106,9 @@ button:hover {
 }
 
 ol :hover {
-    background-color: #dfd3e7;
+    li{
+      background: #dfd3e7;
+    }
     i {
         color: #9356dc;
     }

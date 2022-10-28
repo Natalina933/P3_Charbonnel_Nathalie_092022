@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -29,7 +30,14 @@ ol {
   counter-reset: li;
 }
 
-/*style principal*/
+/* *** Couleurs *** */
+/* Identité graphique*/
+/*style secondaire*/
+/*Couleurs background*/
+/*général*/
+/*Map input*/
+/*dégradé*/
+/*breakpoint*/
 .title {
   font-family: "shrikhand", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -258,7 +266,7 @@ button {
 }
 
 button:hover {
-  filter: contrast(92%) brightness(1.2) drop-shadow(0px 5px 10px #444343);
+  filter: contrast(90%) brightness(1.09) drop-shadow(0px 5px 10px #444343);
 }
 
 /***section funtioning***/
@@ -319,8 +327,10 @@ li {
 }
 
 ol :hover {
-  background-color: #dfd3e7;
   filter: drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
+}
+ol :hover li {
+  background: #dfd3e7;
 }
 ol :hover i {
   color: #9356dc;
