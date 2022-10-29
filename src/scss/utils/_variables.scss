@@ -68,13 +68,10 @@ $breakpointdestop: 1440px;
 .heart {
     display: flex;
     font-size: 1.5rem;
-    
-}
-    .icon {
-        position: relative;
+    position: relative;
         i{
         position: absolute;
-        right: 1rem;
+        right: 2rem;
         }
         .heart-background {
         color: transparent;
