@@ -169,6 +169,7 @@ ol {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   min-width: 0;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 .card__content {
   overflow: hidden;
@@ -198,8 +199,8 @@ ol {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  transition: all 0.5s ease-in-out;
-  padding-inline: 1rem;
+  transform: translateX(65%);
+  transition: transform 0.5s ease-in-out;
 }
 
 .card__price span {
@@ -208,24 +209,28 @@ ol {
 }
 
 .card__price .card__check {
-  height: 86px;
-  padding: 0 25px;
-}
-
-.card__check {
-  background-color: #99e2d0;
-  height: 70px;
-  color: #fff;
   display: flex;
+  height: 65px;
+  margin: 0 15px;
+  background-color: #99e2d0;
+  color: #fff;
   align-items: center;
   border-radius: 0 15px 15px 0;
-  margin-right: 0px;
 }
-.card__check i {
+
+.card .fa-solid {
   font-size: 25px;
   padding: 25px;
   transform: rotate(180deg);
-  transition: 0.5s;
+  transition: all 0.7s ease-in-out;
+}
+
+.card:hover .card__price {
+  transform: translateX(0);
+}
+
+.card:hover .fa-solid {
+  transform: rotate(360deg);
 }
 
 /* Animat*/
