@@ -30,12 +30,6 @@ ol {
   counter-reset: li;
 }
 
-@media screen and (min-width: 992px) {
-  .wrapper {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-}
 /* *** Couleurs *** */
 /* Identité graphique*/
 /*style secondaire*/
@@ -64,6 +58,7 @@ ol {
   display: flex;
   font-size: 23px;
   padding-left: 15px;
+  transition: 0.5s;
 }
 .content .header--arrow {
   display: flex;
@@ -87,7 +82,7 @@ ol {
   display: flex;
   background: #f2f2f2;
   border-radius: 50px 50px 0 0;
-  padding-top: 20px;
+  padding-top: 15px;
   align-items: center;
   justify-content: space-between;
 }
@@ -124,8 +119,19 @@ ol {
   transform: scale(1.1);
 }
 
-.subMenus {
+.subMenus-grid {
   display: grid;
+}
+.subMenus-grid > * {
+  border: 1px solid red;
+}
+@media (min-width: 1440px) {
+  .subMenus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
 }
 
 .subMenu {

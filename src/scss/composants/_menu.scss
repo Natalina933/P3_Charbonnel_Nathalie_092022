@@ -14,7 +14,7 @@
     display: flex;
     font-size: 23px;
     padding-left: 15px;
-    // transition: 0.5s;
+    transition: 0.5s;
   }
   
   .header--arrow {
@@ -26,7 +26,7 @@
   width: 100%;
   object-fit: cover;
   max-width: 100%;
-max-height: 32rem;
+  max-height: 32rem;
 }
 
 .contentMenu {
@@ -40,7 +40,7 @@ max-height: 32rem;
     display: flex;
     background: #f2f2f2;
     border-radius: 50px 50px 0 0;
-    padding-top: 20px;
+    padding-top: 15px;
     align-items: center;
     justify-content: space-between;
   }
@@ -61,11 +61,22 @@ max-height: 32rem;
 
 
 //Section cards
-.subMenus{
+.subMenus-grid{
   display: grid;
+  &>*{
+    border: 1px solid red;
+  }
+  @media (min-width:$breakpointdestop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
 }
 .subMenu{
   background: #f2f2f2;
+  
   max-width: 100%;
   overflow: hidden;
   padding: 0 1rem;
