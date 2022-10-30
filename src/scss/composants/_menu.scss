@@ -66,6 +66,9 @@ max-height: 32rem;
 }
 .subMenu{
   background: #f2f2f2;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
 }
 .categoryMenu-title {
   padding-bottom: 0.5rem;
