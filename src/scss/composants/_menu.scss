@@ -32,13 +32,13 @@
 .contentMenu {
   margin-top: -4rem;
   border-radius: 2rem 2rem 0 0;
-  background-color: #f6f6f6;
+  background-color: $backgroundColor;
   z-index: 1;
   position: relative;
 
   .menu__header {
     display: flex;
-    background: #f2f2f2;
+    background: $backgroundColor;
     border-radius: 50px 50px 0 0;
     padding-top: 15px;
     align-items: center;
@@ -52,7 +52,7 @@
   }
   .heart {
     font-size: 2px;
-    top: 20px;
+    top: 10px;
     align-items: flex-start;
     cursor: pointer;
     }
@@ -63,20 +63,21 @@
 //Section cards
 .subMenus-grid{
   display: grid;
-  &>*{
-    border: 1px solid red;
+
+  span{
+
   }
+
   @media (min-width:$breakpointdestop) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
 }
 .subMenu{
-  background: #f2f2f2;
-  
+  background: $backgroundColor;
   max-width: 100%;
   overflow: hidden;
   padding: 0 1rem;
@@ -89,7 +90,7 @@
   font-weight: 400;
   ::after {
     content: "";
-    background: #99e2d0;
+    background: $tertiary;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -108,13 +109,13 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  background: #fff;
-  margin: 1rem 0;
+  background: $backgroundCards;
   border-radius: 15px;
   @include boxshadowsDark;
   min-width: 0;
   cursor: pointer;
   transition: all .5s ease-in-out;
+  margin: 15px;
   &__content {
     overflow: hidden;
     flex-direction: column;
@@ -148,13 +149,15 @@
     }
     .card__price span{
       font-weight: 700;
-      align-self: center;    
-}
+      align-self: flex-end;  
+      margin-bottom: 9px;
+      margin-right: 22px;
+    }
     .card__price .card__check{
       display: flex;
       height: 65px;
-      margin: 0 15px;
-      background-color: #99e2d0;
+      margin: 0 0 0 15px;
+      background-color: $tertiary;
       color: #fff;
       align-items: center;
       border-radius: 0 15px 15px 0;
@@ -169,8 +172,8 @@
   .card:hover .card__price {
     transform:translateX(0)
     }
-    .card:hover .fa-solid {
-        transform: rotate(360deg);
+  .card:hover .fa-solid {
+    transform: rotate(360deg);
     }
 /* Animat*/
 .delay-0 {

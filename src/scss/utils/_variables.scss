@@ -9,14 +9,16 @@ $tertiary:#99E2D0;
 $dark:#353535;
 $greylight:#ededed;
 
+
 /*Couleurs background*/
 /*général*/
 $backgroundColor:#F7F7F7;
+$backgroundCards:#fff;
 /*Map input*/
 $backgroundSearchInput: $greylight;
 
 /*dégradé*/
-$gradient: linear-gradient(#ff79da, #9356dc);
+$gradient: linear-gradient($secondary, $primary);
 
 /*breakpoint*/
 $breakpointmobile: 767px;
@@ -35,7 +37,7 @@ $breakpointdestop: 1440px;
 @mixin button {
         font-size: 16px;
         @include gradient;
-        color: #fff;
+        color: $backgroundCards;
         border: none;
         border-radius: 50px;
         width: 220px;
@@ -54,7 +56,7 @@ $breakpointdestop: 1440px;
     transform: scale(1.02);
 }
 @mixin gradient{
-    background: linear-gradient(#ff79da, #9356dc);
+    background: linear-gradient($secondary, $primary);
 }
 @mixin highlight {
     text-transform: uppercase;
@@ -71,7 +73,7 @@ $breakpointdestop: 1440px;
     position: relative;
         i{
         position: absolute;
-        right: 2rem;
+        right: 1.5rem;
         }
         .heart-background {
         color: transparent;
