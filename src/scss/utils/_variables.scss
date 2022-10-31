@@ -8,14 +8,18 @@ $tertiary:#99E2D0;
 /*style secondaire*/
 $dark:#353535;
 $greylight:#ededed;
+$grey:grey;
 
 
 /*Couleurs background*/
 /*général*/
 $backgroundColor:#F7F7F7;
 $backgroundCards:#fff;
+$backgroundLiHover:#f5edff;
+
 /*Map input*/
 $backgroundSearchInput: $greylight;
+$backgroundMapContent:#e8e1e1;
 
 /*dégradé*/
 $gradient: linear-gradient($secondary, $primary);
