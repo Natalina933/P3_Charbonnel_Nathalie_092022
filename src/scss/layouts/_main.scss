@@ -61,6 +61,7 @@ button:hover {
         display: flex;
         position: relative; 
         height: 62px;
+        max-width: 338px;
         gap: 1rem;
         align-items: center;
         @include boxshadowsLight;
@@ -124,7 +125,6 @@ ol li:hover {
   }
 
   &__Cards {
-    padding: 32px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
