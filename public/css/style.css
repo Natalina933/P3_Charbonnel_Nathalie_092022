@@ -173,43 +173,33 @@ ol {
   animation: appear 2s;
 }
 .card:nth-child(1) {
-  color: aqua;
   animation-delay: 100ms;
 }
 .card:nth-child(2) {
-  color: aqua;
   animation-delay: 200ms;
 }
 .card:nth-child(3) {
-  color: aqua;
   animation-delay: 300ms;
 }
 .card:nth-child(4) {
-  color: aqua;
   animation-delay: 400ms;
 }
 .card:nth-child(5) {
-  color: aqua;
   animation-delay: 500ms;
 }
 .card:nth-child(6) {
-  color: aqua;
   animation-delay: 600ms;
 }
 .card:nth-child(7) {
-  color: aqua;
   animation-delay: 700ms;
 }
 .card:nth-child(8) {
-  color: aqua;
   animation-delay: 800ms;
 }
 .card:nth-child(9) {
-  color: aqua;
   animation-delay: 900ms;
 }
 .card:nth-child(10) {
-  color: aqua;
   animation-delay: 1000ms;
 }
 .card__content {
@@ -328,11 +318,13 @@ ol {
 /* loader*/
 .lds-content {
   background-color: white;
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+  z-index: 1000;
 }
 .lds-content .lds-roller {
   display: inline-block;
