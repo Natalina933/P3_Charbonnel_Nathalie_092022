@@ -224,7 +224,7 @@ ol {
 .card .fa-solid {
   font-size: 25px;
   padding: 25px;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transition: all 0.7s ease-in-out;
 }
 
@@ -236,46 +236,59 @@ ol {
   transform: rotate(360deg);
 }
 
-/* Button*/
 /* Animat*/
-.delay-0 {
+.animat-0 {
   animation-delay: 0s;
 }
 
-.delay-1 {
+.animat-1 {
   animation-delay: 1s;
 }
 
-.delay-2 {
+.animat-2 {
   animation-delay: 2s;
 }
 
-.delay-3 {
+.animat-3 {
   animation-delay: 3s;
 }
 
-.delay-4 {
+.animat-4 {
   animation-delay: 4s;
 }
 
-.delay-5 {
+.animat-5 {
   animation-delay: 5s;
 }
 
-.delay-6 {
+.animat-6 {
   animation-delay: 6s;
 }
 
-.delay-7 {
+.animat-7 {
   animation-delay: 7s;
 }
 
+.animat-8 {
+  animation-delay: 8s;
+}
+
+.animat-9 {
+  animation-delay: 9s;
+}
+
 /* loader*/
-.lds-roller {
+.lds-content {
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.lds-content .lds-roller {
   display: inline-block;
   position: relative;
-  width: 80px;
-  height: 80px;
 }
 
 .lds-roller div {
@@ -290,7 +303,7 @@ ol {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
   margin: -4px 0 0 -4px;
 }
 

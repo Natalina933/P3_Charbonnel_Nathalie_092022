@@ -156,7 +156,7 @@
   .card .fa-solid {
       font-size: 25px;
       padding: 25px;
-      transform: rotate(180deg);
+      transform: rotate(0deg);
       transition: all .7s ease-in-out;      
     }
   .card:hover .card__price {
@@ -165,49 +165,59 @@
   .card:hover .fa-solid {
     transform: rotate(360deg);
     }
-    /* Button*/
-  // .wrapBtn {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   text-align: center;
-  //   align-items: center;
-  // }
+
 /* Animat*/
-.delay-0 {
+.animat-0 {
   animation-delay: 0s;
 }
-.delay-1 {
+.animat-1 {
   animation-delay: 1s;
 }
-.delay-2 {
+.animat-2 {
   animation-delay: 2s;
 }
-.delay-3 {
+.animat-3 {
   animation-delay: 3s;
 }
-.delay-4 {
+.animat-4 {
   animation-delay: 4s;
 }
-.delay-5 {
+.animat-5 {
   animation-delay: 5s;
 }
-.delay-6 {
+.animat-6 {
   animation-delay: 6s;
 }
-.delay-7 {
+.animat-7 {
   animation-delay: 7s;
+}
+.animat-8 {
+  animation-delay: 8s;
+}
+.animat-9 {
+  animation-delay: 9s;
 }
 
 /* loader*/
-
-.lds-roller {
-  display: inline-block;
+.lds-content{
+  background-color: white;
   position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-roller div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .lds-roller {
+    // img {
+      //   border: 1px solid red;
+      //   position: absolute;
+      //   height: 50px;
+      //   width: 50px;
+      // }
+      display: inline-block;
+      position: relative;
+    }
+  }
+  .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 40px 40px;
 }
@@ -218,7 +228,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: $primary;
+  background: $gradient;
   margin: -4px 0 0 -4px;
 }
 .lds-roller div:nth-child(1) {
