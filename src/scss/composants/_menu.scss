@@ -104,8 +104,15 @@
   @include boxshadowsDark;
   min-width: 0;
   cursor: pointer;
-  transition: all .5s ease-in-out;
   margin: 15px;
+  @for $i from 1 through 10{
+    &:nth-child(#{$i}){
+      color: aqua;
+      animation-delay: 100ms * $i;
+    }
+  }
+  // transition: all .5s ease-in-out;
+  animation: appear 2s;
   &__content {
     overflow: hidden;
     flex-direction: column;
@@ -167,6 +174,14 @@
     }
 
 /* Animat*/
+@keyframes appear {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
 .animat-0 {
   animation-delay: 0s;
 }
