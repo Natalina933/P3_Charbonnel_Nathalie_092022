@@ -14,7 +14,7 @@
     padding-left: 35px;
 }
 form {
-  input[type="text"] {
+    input[type="text"] {
         text-overflow: ellipsis;
         border: none;
         background-color:$backgroundMapContent;
@@ -39,12 +39,12 @@ form {
 }
 /***section button***/
 button{
-  @include button;
+    @include button();
 }
 button:hover {
     filter: contrast(90%) brightness(1.09) drop-shadow(0px 5px 10px #8d8a8a);
 
-  }
+    }
 
 /***section funtioning***/
 
@@ -84,7 +84,7 @@ button:hover {
     h3 {
         font-size: inherit;
         font-weight: 500;
-      }
+        }
 }
 
 /***Order list***/
@@ -108,7 +108,7 @@ button:hover {
 }
 
 ol li:hover {
-      background: $backgroundLiHover;
+    background: $backgroundLiHover;
     
     i {
         color: $primary;
@@ -118,23 +118,23 @@ ol li:hover {
 
 /*******section Card Restaurant*********/
 .menus {
-  background: #f2f2f2;
-  padding: 25px 25px 52px 25px;
-  h2 {
+    background: #f2f2f2;
+    padding: 25px 25px 52px 25px;
+h2 {
     padding: 1.5rem 0 1rem 0;
-  }
+}
 
-  &__Cards {
+&__Cards {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-row-gap: 1.5rem;
     border-radius: 20px 20px 0 0;
     justify-content: space-between;
-    h3 {
-      margin: 0;
-      margin-bottom: 16px;
-      font-size: large;
+h3 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: large;
     }
     @media (min-width:$breakpointtablet) {
         display: grid;
@@ -143,67 +143,66 @@ ol li:hover {
         grid-column-gap: 10px;
         grid-row-gap: 10px;
     }
-  }
+}
 }
 .styleCard {
-  position: relative;
-  min-width: 200px;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
+    position: relative;
+    min-width: 200px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
 }
 .contentTextCard {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
 }
 .menus__Cards img {
-  object-fit: cover;
-  background-position: center;
-  width: 100%;
-  height: 160px;
+    object-fit: cover;
+    background-position: center;
+    width: 100%;
+    height: 160px;
 }
 .new {
-  display: flex;
-  padding: 5px 15px;
-  flex-direction: row;
-  position: absolute;
-  background: $tertiary;
-  color:darken($color: $tertiary, $amount: 50%);
-  top: 1rem;
-  right: 1rem;
-  border-radius: 3px;
+    display: flex;
+    padding: 5px 15px;
+    flex-direction: row;
+    position: absolute;
+    background: $tertiary;
+    color:darken($color: $tertiary, $amount: 50%);
+    top: 1rem;
+    right: 1rem;
+    border-radius: 3px;
 }
 .newNone{
-  display: none;
+    display: none;
 }
 /*Heart*/
 .heart {
   // height: 10vh;
-  display: flex;
-  font-size: 1.5rem;
-  padding: 16px 0px;
+    display: flex;
+    font-size: 1.5rem;
+    padding: 16px 0px;
 }
 .icon {
-  cursor: pointer;
-  position: relative;
-  i{
+    cursor: pointer;
+    position: relative;
+    i{
     position: absolute;
     right: 1rem;
     bottom: 0;
-  }
-  .heart-background {
-    color: transparent;
-    background-image: $gradient;
-    -webkit-background-clip: text;
-    background-clip: text;
-    opacity: 0;
-    transition: 2s ease-in-out forwards;
-  }
-  .heart-background:hover{
+    }
+    .heart-background {
+        color: transparent;
+        background-image: $gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        opacity: 0;
+        transition: 2s ease-in-out forwards;
+    }
+    .heart-background:hover{
     opacity: 1;
     transform: scale(1.1);
-  }
+    }
 }
-
