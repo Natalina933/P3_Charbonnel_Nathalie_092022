@@ -190,6 +190,34 @@ ol {
   animation-delay: appear 1s;
 }
 
+.animat-3 {
+  animation-delay: appear 3s;
+}
+
+.animat-4 {
+  animation-delay: appear 4s;
+}
+
+.animat-5 {
+  animation-delay: appear 5s;
+}
+
+.animat-6 {
+  animation-delay: appear 6s;
+}
+
+.animat-7 {
+  animation-delay: appear 7s;
+}
+
+.animat-8 {
+  animation-delay: appear 8s;
+}
+
+.animat-9 {
+  animation-delay: appear 9s;
+}
+
 header {
   position: relative;
   text-align: center;
