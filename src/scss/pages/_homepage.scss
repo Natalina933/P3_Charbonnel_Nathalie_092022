@@ -107,18 +107,35 @@ button:hover {
     counter-increment: li;
 }
 
-ol li:hover {
-    background: $backgroundLiHover;
+@media screen and (min-width:$breakpointdesktop) {
     
-    i {
-        color: $primary;
+    ol li:hover {
+        background: $backgroundLiHover;
+        
+        i {
+            color: $primary;
+        }
+        filter:  drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
     }
-    filter:  drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
+    .funtioningList  {
+        ol{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        li{
+            min-width: 263px;
+            gap: 1rem;
+            align-items: center;
+        }
+    }
+
+
 }
 
 /*******section Card Restaurant*********/
 .menus {
-    background: #f2f2f2;
+    background: $backgroundMenu;
     padding: 25px 25px 52px 25px;
 h2 {
     padding: 1.5rem 0 1rem 0;
@@ -180,7 +197,6 @@ h3 {
 }
 /*Heart*/
 .heart {
-  // height: 10vh;
     display: flex;
     font-size: 1.5rem;
     padding: 16px 0px;

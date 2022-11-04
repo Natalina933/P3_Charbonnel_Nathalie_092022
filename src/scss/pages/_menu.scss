@@ -61,7 +61,7 @@
 .subMenus-grid{
   display: grid;
 
-  @media (min-width:$breakpointdestop) {
+  @media (min-width:$breakpointdesktop) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }

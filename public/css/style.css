@@ -54,9 +54,8 @@ ol {
   height: 100vh;
   width: 100%;
   z-index: 1;
-  inset: 0;
   opacity: 0.9;
-  animation: lds-disappear 0.4s ease-in-out 3s forwards;
+  animation: lds-disappear 0.5s ease-in-out 3s forwards;
 }
 .lds-content .lds-roller {
   display: inline-block;
@@ -161,7 +160,7 @@ ol {
 }
 @keyframes lds-disappear {
   0% {
-    transform: scale(1);
+    transform: translateY(0);
   }
   100% {
     transform: translateY(-100%);
@@ -171,7 +170,7 @@ ol {
 @keyframes appear {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
@@ -179,43 +178,43 @@ ol {
   }
 }
 .animat-0 {
-  animation-delay: appear 600ms;
+  animation-delay: appear 10ms;
 }
 
 .animat-1 {
-  animation-delay: appear 800ms;
+  animation-delay: appear 11ms;
 }
 
 .animat-2 {
-  animation-delay: appear 1s;
+  animation-delay: appear 12ms;
 }
 
 .animat-3 {
-  animation-delay: appear 3s;
+  animation-delay: appear 13ms;
 }
 
 .animat-4 {
-  animation-delay: appear 4s;
+  animation-delay: appear 14ms;
 }
 
 .animat-5 {
-  animation-delay: appear 5s;
+  animation-delay: appear 15ms;
 }
 
 .animat-6 {
-  animation-delay: appear 6s;
+  animation-delay: appear 16ms;
 }
 
 .animat-7 {
-  animation-delay: appear 7s;
+  animation-delay: appear 17ms;
 }
 
 .animat-8 {
-  animation-delay: appear 8s;
+  animation-delay: appear 18s;
 }
 
 .animat-9 {
-  animation-delay: appear 9s;
+  animation-delay: appear 19ms;
 }
 
 header {
@@ -382,14 +381,26 @@ li {
   counter-increment: li;
 }
 
-ol li:hover {
-  background: #f5edff;
-  filter: drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
-}
-ol li:hover i {
-  color: #9356DC;
-}
+@media screen and (min-width: 1440px) {
+  ol li:hover {
+    background: #f5edff;
+    filter: drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
+  }
+  ol li:hover i {
+    color: #9356DC;
+  }
 
+  .funtioningList ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .funtioningList li {
+    min-width: 263px;
+    gap: 1rem;
+    align-items: center;
+  }
+}
 /*******section Card Restaurant*********/
 .menus {
   background: #f2f2f2;

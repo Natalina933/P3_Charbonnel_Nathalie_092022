@@ -5,7 +5,7 @@
 @keyframes appear {
     0%{
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(50px);
     }
     100%{
         opacity: 1;
@@ -15,35 +15,35 @@
   
   
   .animat-0 {
-    animation-delay: appear 600ms;
+    animation-delay: appear 10ms;
   }
   .animat-1 {
-    animation-delay: appear 800ms;
+    animation-delay: appear 11ms;
   }
   .animat-2 {
-    animation-delay: appear 1s;
+    animation-delay: appear 12ms;
   }
 
   .animat-3 {
-    animation-delay: appear 3s;
+    animation-delay: appear 13ms;
   }
   .animat-4 {
-    animation-delay: appear 4s;
+    animation-delay: appear 14ms;
   }
   .animat-5 {
-    animation-delay: appear 5s;
+    animation-delay: appear 15ms;
   }
   .animat-6 {
-    animation-delay: appear 6s;
+    animation-delay: appear 16ms;
   }
   .animat-7 {
-    animation-delay: appear 7s;
+    animation-delay: appear 17ms;
   }
   .animat-8 {
-    animation-delay: appear 8s;
+    animation-delay: appear 18s;
   }
   .animat-9 {
-    animation-delay: appear 9s;
+    animation-delay: appear 19ms;
   }
   
   

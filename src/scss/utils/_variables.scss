@@ -16,6 +16,7 @@ $grey:grey;
 $backgroundColor:#F7F7F7;
 $backgroundCards:#fff;
 $backgroundLiHover:#f5edff;
+$backgroundMenu:#f2f2f2;
 
 /*Map input*/
 $backgroundSearchInput: $greylight;
@@ -25,9 +26,9 @@ $backgroundMapContent:#e8e1e1;
 $gradient: linear-gradient($secondary, $primary);
 
 /*breakpoint*/
-$breakpointmobile: 767px;
+$breakpointmobile: 768px;
 $breakpointtablet: 1000px;
-$breakpointdestop: 1440px;
+$breakpointdesktop: 1440px;
 
 
 
