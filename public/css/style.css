@@ -381,7 +381,22 @@ li {
   counter-increment: li;
 }
 
-@media screen and (min-width: 1440px) {
+ol li:nth-child(3) {
+  background: #f5edff;
+  filter: drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
+}
+ol li:nth-child(3) i {
+  color: #9356DC;
+}
+
+@media screen and (min-width: 1000px) {
+  ol li:nth-last-child(1) {
+    background: #F7F7F7;
+  }
+  ol li:nth-last-child(1) i {
+    color: grey;
+  }
+
   ol li:hover {
     background: #f5edff;
     filter: drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
@@ -396,7 +411,7 @@ li {
     justify-content: center;
   }
   .funtioningList li {
-    min-width: 263px;
+    min-width: 350px;
     gap: 1rem;
     align-items: center;
   }

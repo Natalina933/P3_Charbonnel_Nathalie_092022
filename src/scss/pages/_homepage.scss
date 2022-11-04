@@ -106,9 +106,20 @@ button:hover {
     li {
     counter-increment: li;
 }
-
-@media screen and (min-width:$breakpointdesktop) {
-    
+ol li:nth-child(3) {
+    background: $backgroundLiHover;
+    i {
+        color: $primary;
+    }
+    filter:  drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
+}
+@media screen and (min-width:$breakpointtablet) {
+    ol li:nth-last-child(1){
+        background: $backgroundColor;
+        i{
+            color: $grey;
+        }
+    }
     ol li:hover {
         background: $backgroundLiHover;
         
@@ -124,15 +135,12 @@ button:hover {
             justify-content: center;
         }
         li{
-            min-width: 263px;
+            min-width: 350px;
             gap: 1rem;
             align-items: center;
         }
     }
-
-
 }
-
 /*******section Card Restaurant*********/
 .menus {
     background: $backgroundMenu;
