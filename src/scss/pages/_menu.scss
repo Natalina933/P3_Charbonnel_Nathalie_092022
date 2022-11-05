@@ -113,6 +113,11 @@
   //     animation-delay: 100ms * $i;
   //   }
   // }
+
+  
+  .results div{
+    @include delay(animation, 8, 0.25s);
+  }
   &__content {
     overflow: hidden;
     flex-direction: column;

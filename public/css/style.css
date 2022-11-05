@@ -60,6 +60,8 @@ ol {
 .lds-content .lds-roller {
   display: inline-block;
   position: relative;
+  width: 80px;
+  height: 80px;
 }
 
 .lds-roller div {
@@ -177,46 +179,6 @@ ol {
     transform: translateY(0px);
   }
 }
-.animat-0 {
-  animation-delay: appear 10ms;
-}
-
-.animat-1 {
-  animation-delay: appear 11ms;
-}
-
-.animat-2 {
-  animation-delay: appear 12ms;
-}
-
-.animat-3 {
-  animation-delay: appear 13ms;
-}
-
-.animat-4 {
-  animation-delay: appear 14ms;
-}
-
-.animat-5 {
-  animation-delay: appear 15ms;
-}
-
-.animat-6 {
-  animation-delay: appear 16ms;
-}
-
-.animat-7 {
-  animation-delay: appear 17ms;
-}
-
-.animat-8 {
-  animation-delay: appear 18s;
-}
-
-.animat-9 {
-  animation-delay: appear 19ms;
-}
-
 header {
   position: relative;
   text-align: center;
@@ -315,6 +277,7 @@ button {
   width: 220px;
   height: 50px;
   cursor: pointer;
+  transition: 0.5s;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
@@ -641,6 +604,38 @@ ol li:nth-child(3) i {
   min-width: 0;
   cursor: pointer;
   margin: 15px;
+}
+.card .results div:nth-child(1) {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+.card .results div:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.card .results div:nth-child(3) {
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+.card .results div:nth-child(4) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.card .results div:nth-child(5) {
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s;
+}
+.card .results div:nth-child(6) {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.card .results div:nth-child(7) {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s;
+}
+.card .results div:nth-child(8) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
 }
 .card__content {
   overflow: hidden;
