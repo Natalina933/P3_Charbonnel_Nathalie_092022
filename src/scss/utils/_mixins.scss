@@ -26,8 +26,11 @@
         &:nth-child(#{$i}) {
         -webkit-#{$rule}-delay: (#{$i*$value});
         #{$rule}-delay: (#{$i*$value});
-        }
+    
     }
+color: red;    
+}
+
     }
   
   

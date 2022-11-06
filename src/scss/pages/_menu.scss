@@ -71,7 +71,6 @@
   max-width: 100%;
   overflow: hidden;
   padding: 0 1rem;
-  animation: appear 0.6s;
 
 }
 .categoryMenu-title {
@@ -107,6 +106,8 @@
   min-width: 0;
   cursor: pointer;
   margin: 15px;
+  animation: appear 0.6s;
+
   // @for $i from 1 through 10{
   //   &:nth-child(#{$i}){
   //     // transition: 5s ease-in-out;
@@ -115,9 +116,9 @@
   // }
 
   
-  .results div{
-    @include delay(animation, 8, 0.25s);
-  }
+  // .results div{
+  //   @include delay(animation, 8, 0.25s);
+  // }
   &__content {
     overflow: hidden;
     flex-direction: column;
