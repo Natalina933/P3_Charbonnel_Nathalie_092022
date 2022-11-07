@@ -470,7 +470,7 @@ ol li:nth-child(3) i {
   -webkit-background-clip: text;
   background-clip: text;
   opacity: 0;
-  transition: 2s ease-in-out;
+  transition: 2s ease-in-out forwards;
 }
 .icon .heart-background:hover {
   opacity: 1;
