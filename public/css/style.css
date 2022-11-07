@@ -179,6 +179,49 @@ ol {
     transform: translateY(50px);
   }
 }
+.results div {
+  color: red;
+  color: red;
+  color: red;
+  color: red;
+  color: red;
+  color: red;
+  color: red;
+  color: red;
+}
+.results div:nth-child(1) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.results div:nth-child(2) {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.results div:nth-child(3) {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.results div:nth-child(4) {
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+.results div:nth-child(5) {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+.results div:nth-child(6) {
+  -webkit-animation-delay: 3.6s;
+  animation-delay: 3.6s;
+}
+.results div:nth-child(7) {
+  -webkit-animation-delay: 4.2s;
+  animation-delay: 4.2s;
+}
+.results div:nth-child(8) {
+  -webkit-animation-delay: 4.8s;
+  animation-delay: 4.8s;
+}
+
 header {
   position: relative;
   text-align: center;

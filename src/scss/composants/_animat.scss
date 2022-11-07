@@ -11,9 +11,12 @@
         opacity: 1;
         transform: translateY(50px);
     }
+    }
+  
+   .results div{
+    @include delay(animation, 8, 0.6s);
   }
-  
-  
+
   // .animat-0 {
   //   animation-delay: appear 10ms;
   // }
@@ -40,7 +43,7 @@
   //   animation-delay: appear 17ms;
   // }
   // .animat-8 {
-  //   animation-delay: appear 18s;
+  //   animation-delay: appear 18ms;
   // }
   // .animat-9 {
   //   animation-delay: appear 19ms;
