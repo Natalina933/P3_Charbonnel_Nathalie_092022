@@ -176,7 +176,7 @@ ol {
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
 header {
@@ -607,52 +607,52 @@ ol li:nth-child(3) i {
 }
 .card:nth-child(1) {
   transition: 0.4s ease-in-out;
-  animation-delay: 600ms;
+  animation-delay: 400ms;
   animation-fill-mode: both;
 }
 .card:nth-child(2) {
   transition: 0.4s ease-in-out;
-  animation-delay: 1200ms;
+  animation-delay: 800ms;
   animation-fill-mode: both;
 }
 .card:nth-child(3) {
   transition: 0.4s ease-in-out;
-  animation-delay: 1800ms;
+  animation-delay: 1200ms;
   animation-fill-mode: both;
 }
 .card:nth-child(4) {
   transition: 0.4s ease-in-out;
-  animation-delay: 2400ms;
+  animation-delay: 1600ms;
   animation-fill-mode: both;
 }
 .card:nth-child(5) {
   transition: 0.4s ease-in-out;
-  animation-delay: 3000ms;
+  animation-delay: 2000ms;
   animation-fill-mode: both;
 }
 .card:nth-child(6) {
   transition: 0.4s ease-in-out;
-  animation-delay: 3600ms;
+  animation-delay: 2400ms;
   animation-fill-mode: both;
 }
 .card:nth-child(7) {
   transition: 0.4s ease-in-out;
-  animation-delay: 4200ms;
+  animation-delay: 2800ms;
   animation-fill-mode: both;
 }
 .card:nth-child(8) {
   transition: 0.4s ease-in-out;
-  animation-delay: 4800ms;
+  animation-delay: 3200ms;
   animation-fill-mode: both;
 }
 .card:nth-child(9) {
   transition: 0.4s ease-in-out;
-  animation-delay: 5400ms;
+  animation-delay: 3600ms;
   animation-fill-mode: both;
 }
 .card:nth-child(10) {
   transition: 0.4s ease-in-out;
-  animation-delay: 6000ms;
+  animation-delay: 4000ms;
   animation-fill-mode: both;
 }
 .card__content {

@@ -113,7 +113,7 @@
   @for $i from 1 through 10{
     &:nth-child(#{$i}){
       transition: .4s ease-in-out;
-      animation-delay: 600ms * $i;
+      animation-delay: 400ms * $i;
       //both restera en place avant et après l'animation
       animation-fill-mode: both;
     }
