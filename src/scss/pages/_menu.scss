@@ -1,0 +1,179 @@
+@use "../utils/" as *;
+
+/******section Menu*********/
+/***header***/
+.content {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  .header--homePage img {
+    width: 50%;
+  }
+  .header--return_homePage {
+    display: flex;
+    font-size: 23px;
+    padding-left: 15px;
+    transition: 0.5s;
+  }
+  .header--arrow {
+    display: flex;
+  }
+}
+//section menu
+.selection--img img {
+  width: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 32rem;
+}
+
+.contentMenu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: $backgroundColor;
+  z-index: 1;
+  position: relative;
+  .menu__header {
+    display: flex;
+    background: $backgroundColor;
+    border-radius: 50px 50px 0 0;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-size: 28px;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .heart {
+    font-size: 2px;
+    top: 10px;
+    align-items: flex-start;
+    cursor: pointer;
+    }
+    @include heart;
+  }
+
+//Section cards
+.subMenus-grid{
+  display: grid;
+
+  @media (min-width:$breakpointtablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.subMenu{
+  background: $backgroundColor;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+
+}
+.categoryMenu-title {
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  position: relative;
+  margin: 20px 15px;
+  font-weight: 400;
+  ::after {
+    content: "";
+    background: $tertiary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 5px;
+  }
+}
+.menuContent {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 2px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background: $backgroundCards;
+  border-radius: 15px;
+  @include boxshadowsDark;
+  min-width: 0;
+  cursor: pointer;
+  margin: 15px;
+  animation: appear 0.5s;
+  
+  
+
+  @for $i from 1 through 10{
+    &:nth-child(#{$i}){
+      transition: .4s ease-in-out;
+      animation-delay: 50ms * $i;
+      //both restera en place avant et après l'animation
+      animation-fill-mode: both;
+    }
+  }
+  &__content {
+    overflow: hidden;
+    flex-direction: column;
+    align-self: center  ;    
+    transition: 0.5s;
+    flex: 1;
+    width: 0;
+    h3 {
+      white-space: nowrap;
+      font-weight: 400;
+      width: 100%;
+    }
+    p {
+      opacity: 0.7;
+      margin: 0;
+    }
+    h3,p{
+      padding-left: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+  .card__price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    transform: translateX(65%);
+    transition: transform .5s ease-in-out;
+  }
+  .card__price span{
+    font-weight: 700;
+    align-self: flex-end;  
+    margin-bottom: 9px;
+    margin-right: 22px;
+  }
+  .card__price .card__check{
+    display: flex;
+    height: 65px;
+    margin: 0 0 0 15px;
+    background-color: $tertiary;
+    color: $backgroundCards;
+    align-items: center;
+    border-radius: 0 15px 15px 0;
+  }
+  .card .fa-solid {
+      font-size: 25px;
+      padding: 25px;
+      transform: rotate(0deg);
+      transition: all .7s ease-in-out;      
+    }
+  .card:hover .card__price {
+    transform:translateX(0)
+    }
+  .card:hover .fa-solid {
+    transform: rotate(360deg);
+    }

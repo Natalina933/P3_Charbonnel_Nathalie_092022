@@ -5,12 +5,16 @@
   "name": "p3_charbonnel_nathalie_092022",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0"
+  },
   "scripts": {
-    "watch": "sass --watch ./src/scss/main.scss ./public/css/style.css"
+    "watch": "sass --watch ./src/scss/main.scss ./public/css/style.css",
+    "build": "postcss style.css -o ./build/style.min.css"
   },
   "keywords": [],
-  "author": "",
+  "author": "Charbonnel Nathalie",
   "license": "ISC",
-  "description": ""
+  "description": "Projet 3 : dynamisez une page web avec des animations css"
 }

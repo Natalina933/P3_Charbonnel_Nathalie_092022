@@ -1,0 +1,232 @@
+@use "../utils/" as *;
+/***section search***/
+.mapContent {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color:$backgroundMapContent;
+    font-size: small;
+    gap: 12px;
+}
+.mapContent i {
+    font-size: 1.2rem;
+    padding-left: 35px;
+}
+form {
+    input[type="text"] {
+        text-overflow: ellipsis;
+        border: none;
+        background-color:$backgroundMapContent;
+        height: 30px;
+        &::placeholder {
+        opacity: 0.8; 
+        font-weight: 700;
+        justify-content: end;
+        }
+    }
+}
+.wrapButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $backgroundColor;
+    padding: 25px 25px 52px 25px;
+        .explore {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+/***section button***/
+button{
+    @include button();
+}
+button:hover {
+    filter: contrast(90%) brightness(1.09) drop-shadow(0px 5px 10px #8d8a8a);
+
+    }
+
+/***section funtioning***/
+
+.functioningContent {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px 52px 25px;
+    h2 {
+        padding: 1.5rem 0 1rem 0;
+    }
+    }
+    .funtioningList {
+    li {
+        display: flex;
+        position: relative; 
+        height: 62px;
+        max-width: 338px;
+        gap: 1rem;
+        align-items: center;
+        @include boxshadowsLight;
+        border-radius: 22px;
+        cursor: pointer;
+        background: $backgroundColor;
+        padding-left: 33px;
+        justify-content: flex-start;
+    }
+
+    ol {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    i {
+        color: $grey;
+    }
+
+    h3 {
+        font-size: inherit;
+        font-weight: 500;
+        }
+}
+
+/***Order list***/
+.funtioningList ol li::before {
+    content: counter(li);
+    background: $primary;
+    color: $backgroundCards;
+    position: absolute;
+    left: 0;
+    aspect-ratio: 1 / 1;
+    width: 33px;
+    border-radius: 50%;
+    border: $greylight 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatex(-50%);
+    }
+    li {
+    counter-increment: li;
+}
+ol li:nth-child(3) {
+    background: $backgroundLiHover;
+    i {
+        color: $primary;
+    }
+    filter:  drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
+}
+@media screen and (min-width:$breakpointtablet) {
+    ol li:nth-last-child(1){
+        background: $backgroundColor;
+        i{
+            color: $grey;
+        }
+    }
+    ol li:hover {
+        background: $backgroundLiHover;
+        
+        i {
+            color: $primary;
+        }
+        filter:  drop-shadow(0px 5px 10px rgba(197, 196, 196, 0.501));
+    }
+    .funtioningList  {
+        ol{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        li{
+            min-width: 350px;
+            gap: 1rem;
+            align-items: center;
+        }
+    }
+}
+/*******section Card Restaurant*********/
+.menus {
+    background: $backgroundMenu;
+    padding: 25px 25px 52px 25px;
+h2 {
+    padding: 1.5rem 0 1rem 0;
+}
+
+&__Cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 1.5rem;
+    border-radius: 20px 20px 0 0;
+    justify-content: space-between;
+h3 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: large;
+    }
+    @media (min-width:$breakpointtablet) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+}
+}
+.styleCard {
+    position: relative;
+    min-width: 200px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.contentTextCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.menus__Cards img {
+    object-fit: cover;
+    background-position: center;
+    width: 100%;
+    height: 160px;
+}
+.new {
+    display: flex;
+    padding: 5px 15px;
+    flex-direction: row;
+    position: absolute;
+    background: $tertiary;
+    color:darken($color: $tertiary, $amount: 50%);
+    top: 1rem;
+    right: 1rem;
+    border-radius: 3px;
+}
+.newNone{
+    display: none;
+}
+/*Heart*/
+.heart {
+    display: flex;
+    font-size: 1.5rem;
+    padding: 16px 0px;
+}
+.icon {
+    cursor: pointer;
+    position: relative;
+    i{
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+    }
+    .heart-background {
+        color: transparent;
+        background-image: $gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        opacity: 0;
+        transition: 2s ease-in-out forwards;
+    }
+    .heart-background:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    }
+}

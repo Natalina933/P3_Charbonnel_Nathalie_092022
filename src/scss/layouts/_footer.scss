@@ -1,0 +1,28 @@
+@use "../utils/" as *;
+footer {
+    position: relative;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 40%);
+    background: $dark;
+    color: white;
+    // text-rendering: geometricPrecision;
+    
+
+h3{
+    font-size: smaller;
+    font-weight: 400;
+}
+
+h2{
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+a{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    }
+}
