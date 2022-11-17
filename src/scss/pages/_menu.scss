@@ -147,7 +147,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    transform: translateX(65%);
+   
     transition: transform .5s ease-in-out;
   }
   .card__price span{
@@ -164,8 +164,10 @@
     color: $backgroundCards;
     align-items: center;
     border-radius: 0 15px 15px 0;
+    margin-right: -95px;
+    transition: all .7s ease-in-out;
   }
-  .card .fa-solid {
+    .card .fa-solid {
       font-size: 25px;
       padding: 25px;
       transform: rotate(0deg);
@@ -173,6 +175,9 @@
     }
   .card:hover .card__price {
     transform:translateX(0)
+    }
+    .card:hover .card__check {
+      margin-right: 0;
     }
   .card:hover .fa-solid {
     transform: rotate(360deg);

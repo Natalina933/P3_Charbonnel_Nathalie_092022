@@ -12,7 +12,7 @@
             position: absolute;
             right: 1.5rem;
             }
-            .heart-background {
+            &-background {
             color: transparent;
             background-image: $gradient;
             -webkit-background-clip: text;
@@ -20,7 +20,7 @@
             opacity: 0;
             transition: 2s ease-in-out;
             }
-            .heart-background:hover{
+            &-background:hover{
             opacity: 1;
             transform: scale(1.1);
             }
