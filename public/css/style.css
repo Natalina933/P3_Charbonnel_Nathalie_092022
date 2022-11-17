@@ -681,7 +681,6 @@ ol li:nth-child(3) i {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  transform: translateX(65%);
   transition: transform 0.5s ease-in-out;
 }
 
@@ -700,6 +699,8 @@ ol li:nth-child(3) i {
   color: #fff;
   align-items: center;
   border-radius: 0 15px 15px 0;
+  margin-right: -95px;
+  transition: all 0.7s ease-in-out;
 }
 
 .card .fa-solid {
@@ -711,6 +712,10 @@ ol li:nth-child(3) i {
 
 .card:hover .card__price {
   transform: translateX(0);
+}
+
+.card:hover .card__check {
+  margin-right: 0;
 }
 
 .card:hover .fa-solid {
